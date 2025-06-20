@@ -38,9 +38,6 @@ The RandomForestClassifier predicts your probability of success on unattempted p
 
 10 problems recommended → based on predicted success and tag-wise weaknesses.
 
-📌 Example Screenshot (Optional)
-(Add a screenshot or demo gif if available)
-
 🚀 Setup Instructions
 1️⃣ Backend Setup
 bash
