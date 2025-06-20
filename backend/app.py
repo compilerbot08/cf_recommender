@@ -1,9 +1,9 @@
 from flask import Flask, request, jsonify
-from flask_cors import CORS  # 👈 to allow React frontend to access the backend
+from flask_cors import CORS
 from model import recommend_problems
 
 app = Flask(__name__)
-CORS(app)  # 👈 Enables CORS for all routes
+CORS(app)
 
 @app.route('/')
 def home():
@@ -19,8 +19,8 @@ def recommend():
 
     try:
         recommendations_df = recommend_problems(handle)
-        recommendations = recommendations_df.to_dict(orient='records')
-        return jsonify(recommendations)
+        # recommendations = recommendations_df.to_dict(orient='records')
+        return jsonify(recommendations_df)
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
